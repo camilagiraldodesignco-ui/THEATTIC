@@ -1,0 +1,814 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+position: relative;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+background:#f6f2ea;
+position: relative;
+
+}
+
+header{
+
+  
+
+display:flex;
+
+justify-content:space-between;
+align-items:center;
+
+padding:20px 80px;
+
+background:#2d1b12;
+
+color:#ffffff;
+
+}
+
+.logo h2{
+
+font-family:'Cormorant Garamond',serif;
+
+  font-size:42px;
+
+}
+
+.logo span{
+
+ font-size:12px;
+letter-spacing:3px;
+
+}
+/*todas las etiquetas a*/
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:30px;
+
+transition:.3s;
+
+}
+/*al poner el cursor en el menu superior cambia de colorr*/
+nav a:hover{
+
+color:#d6a76c;
+
+}
+
+.principal{
+
+height:90vh;
+  background-image: url("../imagenes/fondoprincipal.png");
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+
+
+position:relative;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+/*difuminar*/
+mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+
+}
+
+.principaltexto{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.55);
+
+}
+
+.contenido{
+
+position:relative;
+
+color:white;
+
+text-align:center;
+
+width:900px;
+
+}
+
+.contenido p{
+
+letter-spacing:5px;
+
+margin-bottom:20px;
+
+}
+
+.contenido h1{
+
+font-size:95px;
+
+font-family:'Cormorant Garamond',serif;
+
+line-height:90px;
+
+margin-bottom:30px;
+
+}
+
+.contenido span{
+
+color:#d6a76c;
+
+font-style:italic;
+
+}
+
+.descripcion{
+
+font-size:20px;
+
+letter-spacing:0;
+
+margin-bottom:35px;
+
+}
+
+.buscador{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.buscador input{
+
+width:500px;
+
+padding:18px;
+
+border:none;
+
+font-size:18px;
+
+}
+
+.buscador button{
+
+padding:18px 35px;
+
+background:#7b4a2e;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+.estadisticas{
+
+display:flex;
+
+justify-content:center;
+
+gap:120px;
+
+padding:60px;
+
+background:white;
+
+}
+
+.estadisticas h2{
+
+font-size:42px;
+
+color:#7b4a2e;
+
+}
+
+.estadisticas p{
+
+text-align:center;
+
+}
+
+.productos{
+
+padding:80px;
+
+}
+
+.productos h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:60px;
+
+margin-bottom:50px;
+
+}
+
+
+
+footer{
+
+padding:35px;
+
+text-align:center;
+
+background:#2d1b12;
+
+color:white;
+
+}
+
+
+
+
+
+
+
+.titulo-catalogo{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+
+.escena{
+
+
+    position:relative;
+
+    width:100%;
+    max-width:1200px;
+
+    height:650px;
+
+    margin:auto;
+
+   background-image: url("../imagenes/escena.png"); 
+
+  
+
+    background-size:cover;
+    
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+
+
+}
+
+
+
+
+.objeto{
+
+    position:relative;
+
+
+    text-decoration:none;
+
+    z-index:2;
+
+    transition:transform .4s ease;
+
+}
+
+
+/* imagenes */
+
+.objeto img{
+ position: relative;
+    width:50%;
+
+    height:50%;
+
+    object-fit:contain;
+
+    transition:transform .4s ease,
+               filter .4s ease;
+
+}
+
+
+
+
+.objeto span{
+
+    position:absolute;
+
+    bottom:5px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#2d1b12;
+
+    color:white;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    opacity:0;
+
+    transition:.3s;
+ /*se mantiene en una sola linea*/
+    white-space:nowrap;
+
+}
+
+
+
+
+.objeto:hover{
+
+    z-index:20;
+
+}
+
+.objeto:hover img{
+
+    transform:scale(1.12);
+
+    filter:drop-shadow(0 15px 15px rgba(0,0,0,.25));
+
+}
+
+.objeto:hover span{
+
+    opacity:1;
+
+}
+
+
+
+.estante{
+
+
+    position: relative;
+
+    left:-17%;
+
+    bottom:-28%;
+
+    z-index: 1;
+}
+
+
+
+
+.pintura{
+
+    left:-35%;
+
+    top: -2%;
+
+    z-index: 2;
+}
+
+
+
+.mesita{
+
+    left:-47%;
+
+    bottom:-35%;
+
+   position: absolute;
+    z-index: 18;
+}
+
+
+
+
+.lampara{
+
+    left: -57.5%;
+
+    top:19%;
+
+   position: absolute;
+ z-index: 19;
+}
+
+
+
+
+.alfombra{
+
+    left: 26%;
+    top: -35%;
+    position: absolute;
+
+}
+
+
+
+.sillon{
+    left:-47%;
+
+    bottom:-10%;
+    position: absolute;
+
+}
+
+
+
+
+.ventana{
+
+    left:37%;
+
+    bottom:27%;
+    position: absolute;
+}
+
+
+
+
+.candelabro{
+
+  
+
+    z-index:8;
+
+}
+
+
+
+
+.reloj{
+
+   left: 20%;
+   bottom: 19%;
+    z-index:4;
+position: absolute;
+}
+
+
+/* PIANO cmabiar nombre a instrumentos*/
+
+.piano{
+
+   left: 80%;
+   bottom: 20%;
+position: absolute;
+    z-index:3;
+
+}
+
+
+
+
+.silla{
+
+    right:200px;
+
+    bottom:55px;
+
+    width:190px;
+
+    height:250px;
+position: absolute;
+    z-index:7;
+
+}
+
+
+/* JARRÓN corregir ceramica */
+
+.jarron{
+
+    right:230px;
+
+    top:179px;
+
+    width:40px;
+
+    height:130px;
+position: absolute;
+    z-index:10;
+
+}
+.ventana:hover img{
+    transform:none;
+    filter:none;
+}
+
+.ventana:hover{
+    transform:none;
+}
+
+.ventana span{
+    display:none;
+}
+
+/* La ventana nunca se pone encima de otros objetos */
+.ventana{
+    z-index:1 !important;
+}
+
+.ventana:hover{
+    z-index:1 !important;
+}
+
+/* Version celular */
+
+@media (max-width:480px){
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+header{
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:20px;
+}
+
+nav{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+nav a{
+    margin-left:0;
+}
+
+.hero{
+    height:auto;
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+.contenido{
+    width:100%;
+}
+
+.contenido h1{
+    font-size:42px;
+    line-height:50px;
+    padding:0 10px;
+}
+
+.contenido p{
+    font-size:15px;
+    letter-spacing:1px;
+    padding:0 10px;
+}
+
+.descripcion{
+    font-size:16px;
+}
+
+.buscador{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.buscador input,
+.buscador button{
+    width:100%;
+}
+
+.estadisticas{
+    flex-direction:column;
+    gap:25px;
+    padding:40px 20px;
+}
+
+.productos{
+    padding:30px 20px;
+}
+
+.productos h2{
+    font-size:36px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+    
+}
+
+.card img{
+    height:250px;
+}
+
+
+.categorias{
+    gap:10px;
+}
+
+.categorias button{
+    width:100%;
+    max-width:250px;
+}
+
+
+
+/*Evitar que el link este azul*/
+.card-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+
+
+    .catalogo{
+
+        padding:50px 15px;
+
+    }
+
+    .titulo-catalogo h2{
+
+        font-size:42px;
+
+    }
+
+    .escena{
+
+        height:200px;
+
+    }
+
+    .estante{
+
+     
+    left:-17%;
+
+    bottom:-28%;
+
+    }
+
+    .pintura{
+
+        left:-35%;
+
+         top: -2%;
+
+    }
+
+    .mesita{
+
+        left:60px;
+
+        bottom:20px;
+
+        width:70px;
+
+        height:60px;
+
+    }
+
+    .lampara{
+
+        left:52px;
+
+        top:102px;
+
+        width:90px;
+
+        height:35px;
+
+    }
+
+    .alfombra{
+
+        left:70px;
+
+        bottom:50px;
+
+        width:540%;
+
+       
+
+    }
+
+    .sillon{
+
+        left:120px;
+
+        bottom:170px;
+
+        width:250px;
+
+        height:220px;
+
+    }
+
+    .ventana{
+
+        left:96px;
+
+        top:0;
+
+        width:150px;
+
+        height:130px;
+
+    }
+
+    .candelabro{
+
+        left:220px;
+
+        top:10px;
+
+        width:120px;
+
+        height:160px;
+
+    }
+
+    .reloj{
+
+        right:5px;
+
+        top:190px;
+
+        width:110px;
+
+        height:250px;
+
+    }
+
+    .piano{
+
+        right:5px;
+
+        bottom:40px;
+
+        width:90px;
+
+        height: 60px;
+
+    }
+
+    .silla{
+
+        right:20px;
+
+        bottom:190px;
+
+        width:130px;
+
+        height:180px;
+
+    }
+
+    .jarron{
+
+        right:20px;
+
+        top:110px;
+
+        width:70px;
+
+        height:100px;
+
+    }
+
+}
+
+
+
